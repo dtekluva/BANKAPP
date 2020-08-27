@@ -1,0 +1,4 @@
+name,sender,amount,comment,reciever
+credit,blake,120000,,same as sender
+debit,blake,3000,,same as sender
+transfer,blake,10000,Flexing.,seun
