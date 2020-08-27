@@ -2,3 +2,74 @@ name,sender,amount,comment,reciever
 credit,blake,120000,,same as sender
 debit,blake,3000,,same as sender
 transfer,blake,10000,Flexing.,seun
+deposit, credit,120000,self,same as sender,
+withdrawal, debit,3000,self,same as sender,
+deposit, credit,120000,self,same as sender,
+withdrawal, debit,3000,self,same as sender,
+deposit, credit,120000,self,same as sender,
+withdrawal, debit,3000,self,same as sender,
+deposit, credit,120000,self,same as sender,
+withdrawal, debit,3000,self,same as sender,
+deposit, credit,120000,blake,same as sender,
+withdrawal, debit,3000,blake,same as sender,
+deposit, credit,120000,blake,same as sender,
+withdrawal, debit,3000,blake,same as sender,
+deposit, credit,120000,blake,same,no comment
+withdrawal, debit,3000,blake,same,no comment
+deposit, credit,120000,blake,same,no comment
+withdrawal, debit,3000,blake,same,no comment
+transfer, debit,10000,seun,same,Flexing.
+transfer, credit,10000,<__main__.Account object at 0x000002C66A117488>,same,Flexing.
+deposit, credit,120000,blake,same,no comment
+withdrawal, debit,3000,blake,same,no comment
+transfer, debit,10000,seun,same,Flexing.
+transfer, credit,10000,seun,same,Flexing.
+deposit, credit,120000,blake,same,no comment
+withdrawal, debit,3000,blake,same,no comment
+transfer, debit,10000,seun,same,Flexing.
+transfer, credit,10000,blake,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,same,no comment
+transfer, debit,10000,bolu,same,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,same,no comment
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,atha,no comment
+deposit, credit,120000,atha,same,no comment
+withdrawal, debit,3000,atha,atha,no comment
+transfer, debit,10000,atha,bolu,Flexing.
+transfer, credit,10000,atha,same,Flexing.
+deposit, credit,120000,atha,atha,no comment
+withdrawal, debit,3000,atha,atha,no comment
+transfer, debit,10000,atha,bolu,Flexing.
+transfer, credit,10000,bolu,atha,Flexing.

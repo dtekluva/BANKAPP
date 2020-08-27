@@ -130,43 +130,59 @@ class Account(User):
 
         return str(account_num)
 
-    def deposit(self, amount, comment = ""):
+    def deposit(self, amount, comment = "no comment", source = False):
+
+        transaction_label = "credit"
+
+        if source:
+            transaction_type = "transfer"
+            source = source.name
+        else:
+            transaction_type = "deposit"
+            source = self.name
 
         self.balance += amount # ADD DEPOSIT VALUE TO BALANCE
-        self.store_history("credit", amount, comment)
+        self.store_history(transaction_type, transaction_label, amount, self.name, comment, source)
 
         print(f"Welldone {self.name} your deposit of ₦{amount} was successful your new balance is ₦{self.balance}.")
 
-    def withdraw(self, amount, comment = ""):
+    def withdraw(self, amount, comment = "no comment", collector = False):
 
-        self.balance -= amount # ADD DEPOSIT VALUE TO BALANCE
-        self.store_history("debit", amount, comment)
+        transaction_label = "debit"
+
+        if collector:
+            transaction_type = "transfer"
+            collector = collector.name
+        else:
+            transaction_type = "withdrawal"
+            collector = self.name
+
+        self.balance -= amount # DEDUCT VALUE FROM BALANCE
+        self.store_history(transaction_type, transaction_label, amount, self.name, comment, collector)
 
         print(f"Welldone {self.name} your withdrawal of ₦{amount} was successful your new balance is ₦{self.balance}.")
 
     def transfer(self, amount, recipient, comment = ""):
 
-        self.balance -= amount # REMOVE TRANSFER AMOUNT FROM SENDER'S BALANCE
-        recipient.balance += amount # ADD TRANSFER AMOUNT FROM RECIPIENT'S BALANCE
-
-        self.store_history("transfer", amount, comment, recipient.name)
+        self.withdraw(amount, comment, recipient)
+        recipient.deposit(amount, comment, self)
 
         print(f"Congrats {self.name} your transfer of ₦{amount} to {recipient.name} was successful your new balance is ₦{self.balance}.")
 
-    def store_history(self, type, amount, comment, reciever = "same as sender"):
+    def store_history(self, transaction_type, transaction_label, amount, source, comment, reciever = "same"):
         file = open("financial_statement.csv", "a")
-        file.write(f"{type},{self.name},{amount},{comment},{reciever}\n")
+        file.write(f"{transaction_type}, {transaction_label},{amount},{source},{reciever},{comment}\n")
 
-        print(type, amount, comment, reciever)
+        print(transaction_type, amount, comment, reciever)
         
 
 
 
         
-atha = Account("blake", 23, "inyangete@gmail.com", "08032134387")
+atha = Account("atha", 23, "inyangete@gmail.com", "08032134387")
 print(atha.account_no)
 atha.deposit(120000)
 atha.withdraw(3000)
 
-bolu = Account("seun", 33, "bolu@gmail.com", "08089129387")
+bolu = Account("bolu", 33, "bolu@gmail.com", "08089129387")
 atha.transfer(10000, bolu, "Flexing.")
